@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Projekat_VP/Client/obj
+/Projekat_VP/Common/obj
+/Projekat_VP/Service/obj
+/Projekat_VP/.vs/Projekat_VP
