@@ -7,6 +7,10 @@ namespace Service
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Pokrećem simulaciju prekida veze...");
+            ResourceControl.TextManipulation.TestDisposeProof();
+            Console.WriteLine("Simulacija završena.\n");
+
             ServiceHost host = new ServiceHost(typeof(ServiceContract));
             host.Open();
 
