@@ -27,7 +27,7 @@ namespace Client
             }
 
             var samples = new List<SensorSample>();
-            string logPath = ConfigurationManager.AppSettings["logPath"] ?? "invalid_rows.log";
+            string logPath = "invalid_rows.txt";
 
             using (var logWriter = new StreamWriter(logPath, append: true))
             using (var reader = new StreamReader(path))
