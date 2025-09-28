@@ -1,5 +1,5 @@
-﻿using System;
-using Common;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
@@ -12,6 +12,8 @@ namespace Client
         public List<SensorSample> LoadCsv()
         {
             string path = ConfigurationManager.AppSettings["datasetPath"];
+            Console.WriteLine($"Dataset path from config: {path}");
+
             if (string.IsNullOrEmpty(path))
             {
                 Console.WriteLine("Dataset path not configured in app.config.");
