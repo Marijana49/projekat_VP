@@ -91,18 +91,18 @@ namespace Service
                 {
                     using (var tm = new TextManipulation(testFile))
                     {
-                        tm.AddTextToFile("Prvi red...");
+                        tm.AddTextToFile("First line...");
                         // simulacija prekida / greške usred prenosa
-                        throw new Exception("Simulirani prekid veze!");
+                        throw new Exception("Disconnection simulation started!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Došlo je do greške: " + ex.Message);
+                    Console.WriteLine("Error: " + ex.Message);
                 }
                 using (var reader = new StreamReader(testFile))
                 {
-                    Console.WriteLine("Fajl dostupan nakon greške. Sadržaj:");
+                    Console.WriteLine("File available after error. Content:");
                     Console.WriteLine(reader.ReadToEnd());
                 }
             }
