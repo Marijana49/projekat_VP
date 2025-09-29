@@ -198,7 +198,7 @@ namespace Service
             }
             // svi podaci su u redu ali u slucaju da nisu:
 
-            if(ss.volume == null ||  ss.no2 == null || ss.co == null || ss.pressure == null || ss.dateTime == null)
+            if(double.IsNaN(ss.volume) || double.IsNaN(ss.no2) || double.IsNaN(ss.co) || double.IsNaN(ss.pressure) || ss.dateTime == null)
             {
                 OnWarningRaised?.Invoke(this, $"Data not valid! ({ss.ToString()})");
                 throw new FaultException<DataFormatFault>(new DataFormatFault("Warning! Data is not valid!"));
