@@ -1,18 +1,17 @@
 ﻿using System.Runtime.Serialization;
+using System.ServiceModel.Channels;
 
 namespace Common
 {
     [DataContract]
     public class ValidationFault
     {
-        string message;
+        [DataMember]
+        public string Message { get; set; }
 
         public ValidationFault(string message)
         {
-            this.message = message;
+            Message = message;
         }
-
-        [DataMember]
-        public string Message { get => message; set => message = value; }
     }
 }
