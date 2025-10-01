@@ -5,21 +5,6 @@ namespace Service
 {
     public class ResourceControl
     {
-        struct WordInformation
-        {
-            public string word { get; }
-            public int count { get; }
-            public WordInformation(string word, int count)
-            {
-                this.word = word;
-                this.count = count;
-            }
-
-            public override string ToString()
-            {
-                return "Word : " + word + " Count : " + count;
-            }
-        }
         public class TextManipulation : IDisposable
         {
             private TextWriter textWriter;
